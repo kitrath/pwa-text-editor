@@ -1,33 +1,18 @@
-# PWA Text Editor
+# PWA Text Editor - J.A.T.E
 
-## User Story
-**AS A** developer<br>
-**I WANT** to create notes or code snippets with or without an internet connection<br>
-**SO THAT** I can reliably retrieve them for later use
 
-## Acceptance Criteria
-**GIVEN** a text editor web application
-- **WHEN** I open my application in my editor<br>
-**THEN** I should see a client server folder structure
-- **WHEN** I run `npm run start` from the root directory<br>
-**THEN** I find that my application should start up the backend and serve the client
-- **WHEN** I run the text editor application from my terminal<br>
-**THEN** I find that my JavaScript files have been bundled using webpack
-- **WHEN** I run my webpack plugins<br>
-**THEN** I find that I have generated HTML file, service worker, and a manifest rule
-- **WHEN** I use next-gen JavaScript in my application<br>
-**THEN** I find that the text editor still functions in the browser without errors
-- **WHEN** I opn the text editor<br>
-**THEN** I find that IndexedDB has immediately created a database storage
-- **WHEN** I enter content and subsequently click off of the DOM window<br>
-**THEN** I find that the content in the text editor has been saved with IndexedDB
-- **WHEN** I reopen the text editor after closing it<br>
-**THEN** I find that the content in the text editor has been retrieved from out IndexedDB
-- **WHEN** I click on the install button<br>
-**THEN** I download my web application as an icon on my desktop
-- **WHEN** I load my web application<br>
-**THEN** I should have a registered service worker using workbox
-- **WHEN** I register a service worker<br>
-**THEN** I should have my static assets pre cached upon loading along with subsequent pages and static assets
-- **WHEN** I deploy to Heroku<br>
-**THEN** I should have proper build scripts for a webpack application
+## Description
+**J**ust **A**nother **T**ext **E**ditor (J.A.T.E) uses [CodeMirror](https://codemirror.net/) to provide a basic text editor with JavaScript syntax highlighting in the browser.  J.A.T.E is installable as a [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) from within supported desktop and mobile browsers.  J.A.T.E is served from a simple [nodejs](https://nodejs.org/en) backend using [Express](https://expressjs.com/).  The web browser's [IndexDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) (through the [idb](https://www.npmjs.com/package/idb) package) saves the text you type in J.A.T.E. You can navigate away or close the browser and come back to find everything you've entered. <br><br>
+**PWA Text Editor (J.A.T.E.) Live Example: []()**
+## Installation
+For local development:
+1. Clone this repository: `git clone git@github.com:kitrath/pwa-text-editor`
+2. Navigate to the base directory: `cd pwa-text-editor`
+3. Install dependencies: `npm install`
+6. Start the server: `npm start`
+7. Visit `http://localhost:3000` in your browser
+## Usage
+Think of J.A.T.E. as a persistent scratch-pad with JavaScript syntax highlighting. Type note comments or code snippets in the editor window.  Changes to the text will continuously save and persist when you navigate away or close the application.  Click the install button in the top left navigation bar button to install J.A.T.E. as an app on your device that you can open from in icon on your homescreen or desktop.
+
+## Screenshot
+<p align="center"><img src="./screen.png" width="600px" /></p>
