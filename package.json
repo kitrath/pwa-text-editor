@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "private": true,
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
@@ -12,10 +11,10 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
-  "cacheDirectories": [
-    "server/node_modules",
-    "client/node_modules"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitrath/pwa-text-editor.git"
+  },
   "engines": {
     "npm": "^8.19.2",
     "node": "^16.18.1"
@@ -23,6 +22,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
+  },
   "devDependencies": {
     "concurrently": "^5.2.0"
   }
