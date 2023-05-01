@@ -1,5 +1,3 @@
-const { WebpackOptionsDefaulter } = require("webpack");
-
 const butInstall = document.getElementById('buttonInstall');
 
 // Code source: https://pwa-workshop.js.org/5-pwa-install/#add-an-installation-button
